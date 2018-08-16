@@ -1,0 +1,12 @@
+spring:
+   application:
+     name: ws_ordermanagement_unifiedcustomerrequest
+ldap:
+  userSearchBase: ou=active,ou=authentication,DC=test,DC=jbhunt,DC=com
+  groupSearchBase: ou=authentication,DC=test,DC=jbhunt,DC=com
+  groupSearchFilter: (member:=cn={0},ou=internal_users,ou=active,ou=authentication,dc=test,dc=jbhunt,dc=com)
+  url: ldap://testldap.jbhunt.com:389
+  userSearchFilter: (samAccountName={0})
+  domain: test.jbhunt.com
+ldapClient:
+  endpointUrl: http://directory-dev.jbhunt.com/ldap_v2/services/Users
